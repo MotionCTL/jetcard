@@ -12,7 +12,7 @@ cat $FILE
 echo $password | sudo -S systemctl restart systemd-timesyncd.service
 
 # fix USB device mode
-DIR="/opt/nvidia/l4t-usb-device-mode/"
+DIR="/opt/nvidia/l4t-usb-device-mode"
 echo $password | sudo -S cp $DIR/nv-l4t-usb-device-mode.sh $DIR/nv-l4t-usb-device-mode.sh.orig
 echo $password | sudo -S cp $DIR/nv-l4t-usb-device-mode-stop.sh $DIR/nv-l4t-usb-device-mode-stop.sh.orig
 cat $DIR/nv-l4t-usb-device-mode.sh | grep dhcpd_.*=
